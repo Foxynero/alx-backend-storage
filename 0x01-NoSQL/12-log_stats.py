@@ -7,7 +7,7 @@ from pymongo import MongoClient
 
 if __name__ == '__main__':
     '''Prints the log stats in nginx collection'''
-    con = MongoClient('mongodb://localhost:27017')
+    con = MongoClient('mongodb://127.0.0.1:27017')
     collection = con.logs.nginx
 
     print(f'{collection.estimated_document_count()} logs')
